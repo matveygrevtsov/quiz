@@ -8,6 +8,13 @@
 .cardWrap {
   position: relative;
   z-index: 1;
+  cursor: pointer;
+  transform: scale(1);
+  transition: 0.1s ease-in-out transform;
+}
+
+.cardWrap:hover {
+  transform: scale(1.02);
 }
 
 .blur {

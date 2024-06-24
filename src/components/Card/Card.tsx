@@ -2,7 +2,7 @@ import { FC, useRef, useState } from "react";
 import { ICard } from "../../types";
 import { CardFace } from "./components/CardFace/CardFace";
 import { useClickAway } from "react-use";
-import { Flex } from "@mantine/core";
+import { Flex, Text } from "@mantine/core";
 
 import styles from "./styles.module.css";
 
@@ -79,6 +79,8 @@ export const Card: FC<IProps> = ({ data, index }) => {
       <div
         style={{
           opacity: state.isAnimationRunning || state.isOpened ? 0 : 1,
+          pointerEvents:
+            state.isAnimationRunning || state.isOpened ? "none" : "auto",
         }}
         className={styles.cardWrap}
         onClick={handleClick}
@@ -93,7 +95,14 @@ export const Card: FC<IProps> = ({ data, index }) => {
 
         {!state.isViewed && (
           <Flex className={styles.blur} align="center" justify="center">
-            {index}
+            <Text
+              size="xl"
+              fw={900}
+              variant="gradient"
+              gradient={{ from: "blue", to: "cyan", deg: 360 }}
+            >
+              {index}
+            </Text>
           </Flex>
         )}
       </div>
