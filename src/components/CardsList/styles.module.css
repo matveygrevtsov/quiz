@@ -1,0 +1,9 @@
+.root {
+  min-height: 100%;
+  padding: 16px;
+}
+
+.cardsList {
+  width: 100%;
+  max-width: 1200px;
+}

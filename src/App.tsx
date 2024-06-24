@@ -1,13 +1,7 @@
-import { Flex } from "@mantine/core";
+import { CardsList } from "./components/CardsList/CardsList";
 
 function App() {
-  return (
-    <Flex direction="column" rowGap={16}>
-      <h1>Hello, world!</h1>
-
-      <button>click</button>
-    </Flex>
-  );
+  return <CardsList />;
 }
 
 export default App;

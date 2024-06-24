@@ -1,0 +1,27 @@
+.animator {
+  position: fixed;
+  opacity: 0;
+  z-index: 0;
+  transform: translate(0, 0) scale(1);
+}
+
+.cardWrap {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  transform: scale(1);
+  transition: 0.1s ease-in-out transform;
+}
+
+.cardWrap:hover {
+  transform: scale(1.02);
+}
+
+.blur {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+}
